@@ -1,15 +1,15 @@
-package task.com.epam.test.google;
+package task.com.epam.test;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import task.com.epam.google.CalculatorPage;
-import task.com.epam.google.HomePage;
-import task.com.epam.tenMinuteMail.TenMinuteMailPage;
+import task.com.epam.driver.DriverSingleton;
+import task.com.epam.page.CalculatorPage;
+import task.com.epam.page.HomePage;
+import task.com.epam.page.TenMinuteMailPage;
 
 public class CalculatorPageTest {
     private static final String OS = "Free: Debian, CentOS, CoreOS, Ubuntu, or other User Provided OS";
@@ -30,7 +30,7 @@ public class CalculatorPageTest {
 
     @BeforeMethod
     public static void setup() {
-        driver = new ChromeDriver();
+        driver = DriverSingleton.getDriver();
         driver.get("https://cloud.google.com/ ");
         driver.manage().window().maximize();
     }

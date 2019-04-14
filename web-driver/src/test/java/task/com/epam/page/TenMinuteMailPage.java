@@ -1,11 +1,10 @@
-package task.com.epam.tenMinuteMail;
+package task.com.epam.page;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import task.com.epam.BasePage;
 
 public class TenMinuteMailPage extends BasePage {
     @FindBy(xpath = "//*[@class='mail-address-address']")
