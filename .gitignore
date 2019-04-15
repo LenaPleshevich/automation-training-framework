@@ -1,6 +1,9 @@
+*.war
+*.jar
 *.db
 *.log
-/target
-/bin
+target/
+test-output/
+bin/
 *.iml
-.idea
+.idea/
