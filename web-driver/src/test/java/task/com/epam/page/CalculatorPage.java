@@ -3,50 +3,52 @@ package task.com.epam.page;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-public class CalculatorPage extends BasePage {
+public class CalculatorPage extends AbstractPage {
     private static final int SIZE_WAIT = 20;
+    private final String PAGE_URL = "https://github.com/login";
     @FindBy(xpath = "//div[@class='name ng-binding']")
     private List<WebElement> platformList;
-    @FindBy(id = "input_46")
+    @FindBy(id = "input_49")
     private WebElement instancesNumber;
-    @FindBy(id = "select_58")
+    @FindBy(id = "select_61")
     private WebElement OSDropDown;
-    @FindBy(xpath = "//*[@id='select_container_59']//*[@class='md-ink-ripple']")
+    @FindBy(xpath = "//*[@id='select_container_62']//*[@class='md-ink-ripple']")
     private List<WebElement> OSlist;
-    @FindBy(id = "select_62")
+    @FindBy(id = "select_65")
     private WebElement VMClassDropDown;
-    @FindBy(xpath = "//*[@id='select_container_63']//*[@class='md-ink-ripple']")
+    @FindBy(xpath = "//*[@id='select_container_66']//*[@class='md-ink-ripple']")
     private List<WebElement> VMClassList;
-    @FindBy(id = "select_93")
+    @FindBy(id = "select_96")
     private WebElement instanceTypeDropDown;
-    @FindBy(xpath = "//*[@id='select_container_94']//*[@class='md-ink-ripple']")
+    @FindBy(xpath = "//*[@id='select_container_97']//*[@class='md-ink-ripple']")
     private List<WebElement> instanceTypeList;
     @FindBy(xpath = "//*[@aria-label='Add GPUs']")
     private WebElement GPUcheckBox;
-    @FindBy(id = "select_329")
+    @FindBy(id = "select_332")
     private WebElement GPUsNumberDropDown;
-    @FindBy(xpath = "//*[@id='select_container_330']//*[@class='ng-scope md-ink-ripple']")
+    @FindBy(xpath = "//*[@id='select_container_333']//*[@class='ng-scope md-ink-ripple']")
     private List<WebElement> GPUsNumberList;
-    @FindBy(id = "select_331")
+    @FindBy(id = "select_334")
     private WebElement typeGPUDropDown;
-    @FindBy(xpath = "//*[@id='select_container_332']//*[@class='ng-scope md-ink-ripple']")
+    @FindBy(xpath = "//*[@id='select_container_335']//*[@class='ng-scope md-ink-ripple']")
     private List<WebElement> typeGPUList;
-    @FindBy(id = "select_95")
+    @FindBy(id = "select_98")
     private WebElement localSSDDropDown;
-    @FindBy(xpath = "//*[@id='select_container_96']//*[@class='ng-scope md-ink-ripple']")
+    @FindBy(xpath = "//*[@id='select_container_99']//*[@class='ng-scope md-ink-ripple']")
     private List<WebElement> localSSDList;
-    @FindBy(id = "select_97")
+    @FindBy(id = "select_100")
     private WebElement dataCenterLocationDropDown;
-    @FindBy(xpath = "//*[@id='select_container_98']//*[@class='ng-scope md-ink-ripple']")
+    @FindBy(xpath = "//*[@id='select_container_101']//*[@class='ng-scope md-ink-ripple']")
     private List<WebElement> dataCenterLocationList;
-    @FindBy(id = "select_102")
+    @FindBy(id = "select_105")
     private WebElement commitedUsageDropDown;
-    @FindBy(xpath = "//*[@id='select_container_103']//*[@class='md-ink-ripple']")
+    @FindBy(xpath = "//*[@id='select_container_106']//*[@class='md-ink-ripple']")
     private List<WebElement> commitedUsageList;
     @FindBy(id = "idIframe")
     private WebElement frame;
@@ -58,13 +60,20 @@ public class CalculatorPage extends BasePage {
     private WebElement estimatedCost;
     @FindBy(xpath = "//*[@id='email_quote']")
     private WebElement emailEstimateButton;
-    @FindBy(id = "input_345")
+    @FindBy(id = "input_348")
     private WebElement emailForm;
     @FindBy(xpath = "//*[@aria-label='Send Email']")
     private WebElement sendEmailButton;
 
     public CalculatorPage(WebDriver driver) {
         super(driver);
+        PageFactory.initElements(this.driver,this);
+    }
+
+    @Override
+    protected AbstractPage openPage() {
+        driver.navigate().to(PAGE_URL);
+        return this;
     }
 
     public CalculatorPage selectOS(String OS) {

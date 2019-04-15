@@ -1,0 +1,16 @@
+task\com\epam\test\CalculatorPageTwoTest.class
+task\com\epam\page\HomePage.class
+task\com\epam\page\PricingPage.class
+task\com\epam\model\Calculator.class
+task\com\epam\service\TestDataReader.class
+task\com\epam\driver\DriverSingleton.class
+task\com\epam\page\ProductPage.class
+task\com\epam\page\AbstractPage.class
+task\com\epam\test\CalculatorPageTest.class
+task\com\epam\page\CalculatorPage.class
+task\com\epam\page\TenMinuteMailPage.class
+task\com\epam\service\EmailCreator.class
+task\com\epam\page\TenMinuteMailNetPage.class
+task\com\epam\service\CalculatorCreator.class
+task\com\epam\test\CommonConditions.class
+task\com\epam\model\Email.class
