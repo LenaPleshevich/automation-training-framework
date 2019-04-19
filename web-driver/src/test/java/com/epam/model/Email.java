@@ -1,4 +1,4 @@
-package task.com.epam.model;
+package com.epam.model;
 
 public class Email {
     private String email;

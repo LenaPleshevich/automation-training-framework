@@ -1,4 +1,4 @@
-package task.com.epam.service;
+package com.epam.service;
 
 import java.util.ResourceBundle;
 

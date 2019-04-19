@@ -1,4 +1,4 @@
-package task.com.epam.util;
+package com.epam.util;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
@@ -8,7 +8,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import task.com.epam.driver.DriverSingleton;
+import com.epam.driver.DriverSingleton;
 
 import java.io.File;
 import java.io.IOException;

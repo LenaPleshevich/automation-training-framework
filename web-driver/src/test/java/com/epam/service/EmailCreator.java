@@ -1,6 +1,6 @@
-package task.com.epam.service;
+package com.epam.service;
 
-import task.com.epam.model.Email;
+import com.epam.model.Email;
 
 public class EmailCreator {
     public static Email withEmptyText(String email){

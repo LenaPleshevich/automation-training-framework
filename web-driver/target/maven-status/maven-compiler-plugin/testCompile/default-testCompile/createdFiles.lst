@@ -6,6 +6,7 @@ task\com\epam\service\TestDataReader.class
 task\com\epam\driver\DriverSingleton.class
 task\com\epam\page\ProductPage.class
 task\com\epam\page\AbstractPage.class
+task\com\epam\util\TestListener.class
 task\com\epam\test\CalculatorPageTest.class
 task\com\epam\page\CalculatorPage.class
 task\com\epam\page\TenMinuteMailPage.class

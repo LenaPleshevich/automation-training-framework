@@ -1,6 +1,6 @@
-package task.com.epam.service;
+package com.epam.service;
 
-import task.com.epam.model.Calculator;
+import com.epam.model.Calculator;
 
 public class CalculatorCreator {
     private static final String OS = "testdata.calculator.os";

@@ -1,9 +1,9 @@
-package task.com.epam.test;
+package com.epam.test;
 
+import com.epam.driver.DriverSingleton;
+import com.epam.util.TestListener;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
-import task.com.epam.driver.DriverSingleton;
-import task.com.epam.util.TestListener;
 
 @Listeners({TestListener.class})
 public class CommonConditions {

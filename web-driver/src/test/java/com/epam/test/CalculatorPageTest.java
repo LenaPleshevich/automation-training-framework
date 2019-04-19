@@ -1,20 +1,15 @@
-package task.com.epam.test;
+package com.epam.test;
 
+import com.epam.driver.DriverSingleton;
+import com.epam.model.Calculator;
+import com.epam.model.Email;
+import com.epam.page.HomePage;
+import com.epam.page.TenMinuteMailPage;
+import com.epam.service.CalculatorCreator;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
-import task.com.epam.driver.DriverSingleton;
-import task.com.epam.model.Calculator;
-import task.com.epam.model.Email;
-import task.com.epam.page.CalculatorPage;
-import task.com.epam.page.HomePage;
-import task.com.epam.page.TenMinuteMailPage;
-import task.com.epam.service.CalculatorCreator;
+import com.epam.page.CalculatorPage;
 
 public class CalculatorPageTest extends CommonConditions{
     private static WebDriver driver;
