@@ -14,24 +14,11 @@ import task.com.epam.page.TenMinuteMailNetPage;
 import task.com.epam.service.CalculatorCreator;
 
 public class CalculatorPageTwoTest extends CommonConditions{
-    private static WebDriver driver;
     private static HomePage homePage;
     private static TenMinuteMailNetPage tenMinuteMailNetPage;
     private static CalculatorPage calculatorPage;
     private Calculator calculator;
     private Email email;
-
-    @BeforeMethod()
-    public void setUp()
-    {
-        driver = DriverSingleton.getDriver();
-    }
-
-    @AfterClass(alwaysRun = true)
-    public void stopBrowser()
-    {
-        DriverSingleton.closeDriver();
-    }
 
     public void createEstimate(){
         homePage = new HomePage(driver).openPage();
