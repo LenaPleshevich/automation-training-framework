@@ -1,5 +1,7 @@
 package com.epam.page;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,6 +13,7 @@ import java.util.List;
 
 public class CalculatorPage extends AbstractPage {
     private static final int SIZE_WAIT = 20;
+    private final Logger logger = LogManager.getRootLogger();
     private final String PAGE_URL = "https://github.com/login";
     @FindBy(xpath = "//div[@class='name ng-binding']")
     private List<WebElement> platformList;
@@ -73,6 +76,7 @@ public class CalculatorPage extends AbstractPage {
     @Override
     protected AbstractPage openPage() {
         driver.navigate().to(PAGE_URL);
+        logger.info("Calculator page opened");
         return this;
     }
 
