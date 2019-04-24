@@ -9,37 +9,11 @@ import com.epam.page.HomePage;
 import com.epam.page.TenMinuteMailNetPage;
 import com.epam.service.CalculatorCreator;
 
-public class CalculatorPageTwoTest extends CommonConditions{
-    private static HomePage homePage;
-    private static TenMinuteMailNetPage tenMinuteMailNetPage;
-    private static CalculatorPage calculatorPage;
-    private Calculator calculator;
-    private Email email;
-
-    public void createEstimate(){
-        homePage = new HomePage(driver).openPage();
-        calculatorPage = homePage
-                .goToPageProducts()
-                .goToPagePrising()
-                .goToPageCalculators();
-        calculatorPage.switchToFrame();
-        calculatorPage.selectPlatform(calculator.getPlatform())
-                .selectInstancesNumber(calculator.getInstancesNumber())
-                .selectOS(calculator.getOS())
-                .selectVMClass(calculator.getVMClass())
-                .selectInstanceType(calculator.getTypeInstance())
-                .addGPU(calculator.getGPUNumber(), calculator.getTypeGPU())
-                .selectLocalSSD(calculator.getLocalSSD())
-                .selectDataCenterLocation(calculator.getDataCenterLocation())
-                .selectCommitedUsage(calculator.getCommitedUsage());
-        calculatorPage.addToExecute();
-    }
-
+public class CalculatorPageTwoTest extends BaseTest{
     @Test
     public void checkTotalCostInEmailTest(){
         calculator = CalculatorCreator.withCredentialsFromProperties();
         createEstimate();
-        System.out.println(calculatorPage.getCost().getText());
         calculator.setCost(calculatorPage.getCost().getText());
         calculatorPage.emailEstimate();
         Assert.assertTrue(calculator.getCost().indexOf(getTotalCost().getTextWithTotalCost()) > -1,

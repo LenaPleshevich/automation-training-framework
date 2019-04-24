@@ -1,5 +1,7 @@
 package com.epam.model;
 
+import java.util.Objects;
+
 public class Calculator {
     private String OS;
     private String instancesNumber;
@@ -12,8 +14,10 @@ public class Calculator {
     private String GPUNumber;
     private String typeGPU;
     private String cost;
-//TODO add checkbox
-    public Calculator(String OS, String instancesNumber, String platform, String VMClass, String typeInstance, String localSSD, String commitedUsage, String dataCenterLocation, String GPUNumber, String typeGPU) {
+
+    public Calculator(String OS, String instancesNumber, String platform, String VMClass,
+                      String typeInstance, String localSSD, String commitedUsage,
+                      String dataCenterLocation, String GPUNumber, String typeGPU) {
         this.OS = OS;
         this.instancesNumber = instancesNumber;
         this.platform = platform;
@@ -24,7 +28,7 @@ public class Calculator {
         this.dataCenterLocation = dataCenterLocation;
         this.GPUNumber = GPUNumber;
         this.typeGPU = typeGPU;
-        this.cost = "0.0001";
+        this.cost = "";
     }
 
     public String getOS() {
@@ -120,35 +124,25 @@ public class Calculator {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Calculator that = (Calculator) o;
+        Calculator calculator = (Calculator) o;
 
-        if (!OS.equals(that.OS)) return false;
-        if (!instancesNumber.equals(that.instancesNumber)) return false;
-        if (!platform.equals(that.platform)) return false;
-        if (!VMClass.equals(that.VMClass)) return false;
-        if (!typeInstance.equals(that.typeInstance)) return false;
-        if (!localSSD.equals(that.localSSD)) return false;
-        if (!commitedUsage.equals(that.commitedUsage)) return false;
-        if (!dataCenterLocation.equals(that.dataCenterLocation)) return false;
-        if (!GPUNumber.equals(that.GPUNumber)) return false;
-        if (!typeGPU.equals(that.typeGPU)) return false;
-        return cost.equals(that.cost);
+        return Objects.equals(OS, calculator.OS) &&
+                Objects.equals(instancesNumber, calculator.instancesNumber) &&
+                Objects.equals(platform, calculator.platform) &&
+                Objects.equals(VMClass, calculator.VMClass) &&
+                Objects.equals(typeInstance, calculator.typeInstance) &&
+                Objects.equals(localSSD, calculator.localSSD) &&
+                Objects.equals(commitedUsage, calculator.commitedUsage) &&
+                Objects.equals(dataCenterLocation, calculator.dataCenterLocation) &&
+                Objects.equals(GPUNumber, calculator.GPUNumber) &&
+                Objects.equals(typeGPU, calculator.typeGPU) &&
+                Objects.equals(cost, calculator.cost);
     }
 
     @Override
     public int hashCode() {
-        int result = OS.hashCode();
-        result = 31 * result + instancesNumber.hashCode();
-        result = 31 * result + platform.hashCode();
-        result = 31 * result + VMClass.hashCode();
-        result = 31 * result + typeInstance.hashCode();
-        result = 31 * result + localSSD.hashCode();
-        result = 31 * result + commitedUsage.hashCode();
-        result = 31 * result + dataCenterLocation.hashCode();
-        result = 31 * result + GPUNumber.hashCode();
-        result = 31 * result + typeGPU.hashCode();
-        result = 31 * result + cost.hashCode();
-        return result;
+        return Objects.hash(instancesNumber, platform, VMClass, typeInstance, localSSD,
+                commitedUsage, dataCenterLocation, GPUNumber, typeGPU, cost);
     }
 
     @Override

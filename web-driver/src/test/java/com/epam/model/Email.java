@@ -54,5 +54,4 @@ public class Email {
                 ", textWithTotalCost='" + textWithTotalCost + '\'' +
                 '}';
     }
-    ///TODO equals and hashCOde
 }
