@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Calculator">
-              <span class="suite-name border-failed">Calculator</span>
+              <span class="suite-name border-skipped">Calculator</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">1 method,  1 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Calculator" class="hide-methods failed suite-Calculator"> (hide)</a> <!-- hide-methods failed suite-Calculator -->
-                      <a href="#" panel-name="suite-Calculator" class="show-methods failed suite-Calculator"> (show)</a> <!-- show-methods failed suite-Calculator -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Calculator" class="hide-methods skipped suite-Calculator"> (hide)</a> <!-- hide-methods skipped suite-Calculator -->
+                      <a href="#" panel-name="suite-Calculator" class="show-methods skipped suite-Calculator"> (show)</a> <!-- show-methods skipped suite-Calculator -->
                     </span>
-                    <div class="method-list-content failed suite-Calculator">
+                    <div class="method-list-content skipped suite-Calculator">
                       <span>
-                        <img width="3%" src="failed.png"/>
+                        <img width="3%" src="skipped.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Calculator" title="com.epam.test.CalculatorPageTest" hash-for-method="checkTotalCostInEmailTest">checkTotalCostInEmailTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Calculator -->
+                    </div> <!-- method-list-content skipped suite-Calculator -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,9 +117,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Calculator" class="panel Calculator">
-          <div class="suite-Calculator-class-failed">
+          <div class="suite-Calculator-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">com.epam.test.CalculatorPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -128,43 +128,26 @@
                   <a name="checkTotalCostInEmailTest">
                   </a> <!-- checkTotalCostInEmailTest -->
                   <span class="method-name">checkTotalCostInEmailTest</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
-from no such execution context
-  (Session info: chrome=73.0.3683.103)
-  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 10.0.17134 x86) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on XP (bcb22bd03bb02ed672fa14992637c429)] -&gt; xpath: //*[@id=&apos;select_container_97&apos;]//*[@class=&apos;md-ink-ripple&apos;]] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-4KPN36F&apos;, ip: &apos;192.168.100.11&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628402 (536cd7adbad73a..., userDataDir: C:\Users\lenap\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:50406}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.103, webStorageEnabled: true}
-Session ID: a740e2a492527897f1f5157a817a1b9c
-*** Element info: {Using=xpath, value=//*[@class=&apos;mail-address-address&apos;]}
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy24.getAttribute(Unknown Source)
-	at org.openqa.selenium.support.ui.ExpectedConditions.getAttributeOrCssValue(ExpectedConditions.java:1139)
-	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$attributeToBeNotEmpty$0(ExpectedConditions.java:1135)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
-	at com.epam.page.TenMinuteMailPage.getGenerateMail(TenMinuteMailPage.java:37)
-	at com.epam.test.CalculatorPageTest.checkTotalCostInEmailTest(CalculatorPageTest.java:19)
-... Removed 33 stack frames
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628402 (536cd7adbad73a..., userDataDir: C:\Users\lenap\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:51666}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.103, webStorageEnabled: true}
+Session ID: bcb22bd03bb02ed672fa14992637c429
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.epam.page.AbstractPage.waitUntilElementClickable(AbstractPage.java:21)
+	at com.epam.page.CalculatorPage.selectParameter(CalculatorPage.java:189)
+	at com.epam.page.CalculatorPage.selectInstanceType(CalculatorPage.java:134)
+	at com.epam.test.CommonConditions.selectParametersInCalculator(CommonConditions.java:57)
+	at com.epam.test.CommonConditions.createEstimate(CommonConditions.java:46)
+	at com.epam.test.CommonConditions.setUp(CommonConditions.java:29)
+... Removed 32 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Calculator-class-failed -->
+          </div> <!-- suite-Calculator-class-skipped -->
         </div> <!-- panel Calculator -->
         <div panel-name="test-xml-Calculator" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -221,12 +204,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'checkTotalCostInEmailTest')
 data.setCell(0, 2, 'com.epam.test.CalculatorPageTest')
-data.setCell(0, 3, 6087);
+data.setCell(0, 3, 0);
 window.suiteTableData['Calculator']= { tableData: data, tableDiv: 'times-div-Calculator'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 0 ms</span>
               <div id="times-div-Calculator">
               </div> <!-- times-div-Calculator -->
             </div> <!-- times-div -->
@@ -253,19 +236,19 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">com.epam.test.CalculatorPageTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">checkTotalCostInEmailTest</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
               <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">checkTotalCostInEmailTest</span>
-                <span class="method-start">73224 ms</span>
-              </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">stopBrowser</span>
-                <span class="method-start">109740 ms</span>
+                <span class="method-start">123159 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
