@@ -195,7 +195,7 @@ public class CalculatorPage extends AbstractPage {
         }
     }
 
-    public WebDriver switchToFrame() {
+    public WebDriver switchToInnerHtmlDocument() {
         webDriverWait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frame));
         return driver;
     }

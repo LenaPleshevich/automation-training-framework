@@ -18,7 +18,7 @@ public class CalculatorPageTest extends CommonConditions{
        driver.switchTo().window(tabs.get(1));
        email = new Email(tenMinuteMailPage.getGenerateMail());
        driver.switchTo().window(tabs.get(0));
-       calculatorPage.switchToFrame();
+       calculatorPage.switchToInnerHtmlDocument();
        calculatorPage.inputEmail(email.getEmail()).sendEmail();
        System.out.println(tabs.size());
        driver.switchTo().window(tabs.get(1));

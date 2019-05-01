@@ -42,7 +42,7 @@ public class CommonConditions {
                 .goToPageProducts()
                 .goToPagePrising()
                 .goToPageCalculators();
-        calculatorPage.switchToFrame();
+        calculatorPage.switchToInnerHtmlDocument();
         selectParametersInCalculator();
         calculatorPage.addToExecute();
         resultWithTotalCost = calculatorPage.getCost().getText();
