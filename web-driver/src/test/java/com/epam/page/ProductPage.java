@@ -8,8 +8,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ProductPage extends AbstractPage {
-    private final String PAGE_URL = "https://github.com/login";
+    private final String PAGE_URL = "https://cloud.google.com/products/";
     private final Logger logger = LogManager.getRootLogger();
+
     @FindBy(xpath = "//*[@track-name='seePricing']")
     private WebElement buttonSeePrising;
 
@@ -19,14 +20,14 @@ public class ProductPage extends AbstractPage {
     }
 
     @Override
-    protected AbstractPage openPage() {
+    protected ProductPage openPage() {
         driver.navigate().to(PAGE_URL);
         logger.info("Product page opened");
         return this;
     }
 
     public PricingPage goToPagePrising() {
-        initWait(buttonSeePrising);
+        waitUntilElementClickable(buttonSeePrising);
         buttonSeePrising.click();
         return new PricingPage(driver);
     }

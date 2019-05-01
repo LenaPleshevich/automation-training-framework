@@ -7,64 +7,88 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
 public class CalculatorPage extends AbstractPage {
-    private static final int SIZE_WAIT = 20;
     private final Logger logger = LogManager.getRootLogger();
-    private final String PAGE_URL = "https://github.com/login";
+    private final String PAGE_URL = "https://cloud.google.com/products/instance/";
+
     @FindBy(xpath = "//div[@class='name ng-binding']")
     private List<WebElement> platformList;
+
     @FindBy(id = "input_49")
     private WebElement instancesNumber;
+
     @FindBy(id = "select_61")
-    private WebElement OSDropDown;
+    private WebElement osDropDown;
+
     @FindBy(xpath = "//*[@id='select_container_62']//*[@class='md-ink-ripple']")
-    private List<WebElement> OSlist;
+    private List<WebElement> osList;
+
     @FindBy(id = "select_65")
-    private WebElement VMClassDropDown;
+    private WebElement vmClassDropDown;
+
     @FindBy(xpath = "//*[@id='select_container_66']//*[@class='md-ink-ripple']")
-    private List<WebElement> VMClassList;
+    private List<WebElement> vmClassList;
+
     @FindBy(id = "select_96")
     private WebElement instanceTypeDropDown;
+
     @FindBy(xpath = "//*[@id='select_container_97']//*[@class='md-ink-ripple']")
     private List<WebElement> instanceTypeList;
+
     @FindBy(xpath = "//*[@aria-label='Add GPUs']")
     private WebElement GPUcheckBox;
+
     @FindBy(id = "select_332")
     private WebElement GPUsNumberDropDown;
+
     @FindBy(xpath = "//*[@id='select_container_333']//*[@class='ng-scope md-ink-ripple']")
     private List<WebElement> GPUsNumberList;
+
     @FindBy(id = "select_334")
     private WebElement typeGPUDropDown;
+
     @FindBy(xpath = "//*[@id='select_container_335']//*[@class='ng-scope md-ink-ripple']")
     private List<WebElement> typeGPUList;
+
     @FindBy(id = "select_98")
     private WebElement localSSDDropDown;
+
     @FindBy(xpath = "//*[@id='select_container_99']//*[@class='ng-scope md-ink-ripple']")
     private List<WebElement> localSSDList;
+
     @FindBy(id = "select_100")
     private WebElement dataCenterLocationDropDown;
+
     @FindBy(xpath = "//*[@id='select_container_101']//*[@class='ng-scope md-ink-ripple']")
     private List<WebElement> dataCenterLocationList;
+
     @FindBy(id = "select_105")
     private WebElement commitedUsageDropDown;
+
     @FindBy(xpath = "//*[@id='select_container_106']//*[@class='md-ink-ripple']")
     private List<WebElement> commitedUsageList;
+
     @FindBy(id = "idIframe")
     private WebElement frame;
+
     @FindBy(xpath = "//*[text()='Add to Estimate'][@aria-label='Add to Estimate']")
     private WebElement addToExecuteButton;
+
     @FindBy(xpath = "//*[@class='md-list-item-text ng-binding']")
     private List<WebElement> estimatesParameters;
+
     @FindBy(xpath = "//h2//b[@class='ng-binding']")
     private WebElement estimatedCost;
+
     @FindBy(xpath = "//*[@id='email_quote']")
     private WebElement emailEstimateButton;
-    @FindBy(id = "input_348")
+
+    @FindBy(id = "input_385")
     private WebElement emailForm;
+
     @FindBy(xpath = "//*[@aria-label='Send Email']")
     private WebElement sendEmailButton;
 
@@ -74,46 +98,45 @@ public class CalculatorPage extends AbstractPage {
     }
 
     @Override
-    protected AbstractPage openPage() {
+    protected CalculatorPage openPage() {
         driver.navigate().to(PAGE_URL);
-        logger.info("Calculator page opened");
+        logger.info("Instance page opened");
         return this;
     }
 
     public CalculatorPage selectOS(String OS) {
-        OSDropDown.click();
-        selectParameter(OSlist, OS);
+        osDropDown.click();
+        selectParameter(osList, OS);
         return this;
     }
 
     public CalculatorPage selectVMClass(String VMClass) {
-        initWait(VMClassDropDown);
-        VMClassDropDown.click();
-        selectParameter(VMClassList, VMClass);
+        waitUntilElementClickable(vmClassDropDown);
+        vmClassDropDown.click();
+        selectParameter(vmClassList, VMClass);
         return this;
     }
 
-    public CalculatorPage selectInstancesNumber(String number) {
-        initWait(instancesNumber);
-        instancesNumber.sendKeys(number);
+    public CalculatorPage selectInstancesNumber(int number) {
+        waitUntilElementClickable(instancesNumber);
+        instancesNumber.sendKeys(number + "");
         return this;
     }
 
     public CalculatorPage selectPlatform(String platform) {
-        new WebDriverWait(driver,SIZE_WAIT);
         selectParameter(platformList,platform);
         return this;
     }
 
     public CalculatorPage selectInstanceType(String instanceType) {
-        initWait(instanceTypeDropDown);
+        waitUntilElementClickable(instanceTypeDropDown);
         instanceTypeDropDown.click();
         selectParameter(instanceTypeList, instanceType);
         return this;
     }
 
     public CalculatorPage selectGPUsNumber(String number) {
-        initWait(GPUsNumberDropDown);
+        waitUntilElementClickable(GPUsNumberDropDown);
         GPUsNumberDropDown.click();
         selectParameter(GPUsNumberList, number);
         return this;
@@ -139,7 +162,7 @@ public class CalculatorPage extends AbstractPage {
     }
 
     public CalculatorPage sendEmail(){
-        initWait(sendEmailButton);
+        waitUntilElementClickable(sendEmailButton);
         sendEmailButton.click();
         return this;
     }
@@ -157,13 +180,14 @@ public class CalculatorPage extends AbstractPage {
     }
 
     public CalculatorPage inputEmail(String email){
-        initWait(emailForm);
+        waitUntilElementClickable(emailForm);
         emailForm.sendKeys(email);
+        System.out.println("Enter this email " + email);
         return this;
     }
 
     private void selectParameter(List<WebElement> parameters, String parameter) {
-        initWait(parameters.get(0));
+        waitUntilElementClickable(parameters.get(0));
         for(WebElement webElement: parameters) {
             if(webElement.getText().contains(parameter)) {
                 webElement.click();
@@ -173,7 +197,7 @@ public class CalculatorPage extends AbstractPage {
     }
 
     public WebDriver switchToFrame() {
-        new WebDriverWait(driver,SIZE_WAIT).until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frame));
+        webDriverWait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frame));
         return driver;
     }
 
@@ -183,7 +207,8 @@ public class CalculatorPage extends AbstractPage {
     }
 
     public WebDriver emailEstimate(){
-        initWait(emailEstimateButton);
+        waitUntilElementClickable(emailEstimateButton);
+        System.out.println("Element clickable");
         emailEstimateButton.click();
         return driver;
     }

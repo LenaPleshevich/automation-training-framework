@@ -1,6 +1,7 @@
 com\epam\test\CommonConditions.class
 com\epam\page\HomePage.class
 com\epam\page\TenMinuteMailPage.class
+com\epam\test\TwoTabTest.class
 com\epam\service\TestDataReader.class
 com\epam\driver\DriverSingleton.class
 com\epam\test\CalculatorPageTest.class

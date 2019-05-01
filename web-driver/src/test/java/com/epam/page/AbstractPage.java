@@ -7,16 +7,17 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public abstract class AbstractPage {
     protected WebDriver driver;
-    protected WebElement webDriverWait;
+    protected WebDriverWait webDriverWait;
     protected final int WAIT_TIMEOUT_SECONDS = 20;
 
     protected AbstractPage(WebDriver driver) {
         this.driver = driver;
+        webDriverWait = new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS);
     }
 
     protected abstract AbstractPage openPage();
 
-    protected void initWait(WebElement webElement){
-        webDriverWait = new WebDriverWait(driver, WAIT_TIMEOUT_SECONDS).until(ExpectedConditions.elementToBeClickable(webElement));
+    protected void waitUntilElementClickable(WebElement webElement){
+        webDriverWait.until(ExpectedConditions.elementToBeClickable(webElement));
     }
 }

@@ -2,48 +2,46 @@ package com.epam.model;
 
 import java.util.Objects;
 
-public class Calculator {
-    private String OS;
-    private String instancesNumber;
+public class Instance {
+    private String os;
+    private int instancesNumber;
     private String platform;
-    private String VMClass;
+    private String vmClass;
     private String typeInstance;
     private String localSSD;
     private String commitedUsage;
     private String dataCenterLocation;
-    private String GPUNumber;
+    private String numberGPU;
     private String typeGPU;
-    private String cost;
 
-    public Calculator(String OS, String instancesNumber, String platform, String VMClass,
-                      String typeInstance, String localSSD, String commitedUsage,
-                      String dataCenterLocation, String GPUNumber, String typeGPU) {
-        this.OS = OS;
+    public Instance(String os, int instancesNumber, String platform, String vmClass,
+                    String typeInstance, String localSSD, String commitedUsage,
+                    String dataCenterLocation, String numberGPU, String typeGPU) {
+        this.os = os;
         this.instancesNumber = instancesNumber;
         this.platform = platform;
-        this.VMClass = VMClass;
+        this.vmClass = vmClass;
         this.typeInstance = typeInstance;
         this.localSSD = localSSD;
         this.commitedUsage = commitedUsage;
         this.dataCenterLocation = dataCenterLocation;
-        this.GPUNumber = GPUNumber;
+        this.numberGPU = numberGPU;
         this.typeGPU = typeGPU;
-        this.cost = "";
     }
 
-    public String getOS() {
-        return OS;
+    public String getOs() {
+        return os;
     }
 
-    public void setOS(String OS) {
-        this.OS = OS;
+    public void setOs(String os) {
+        this.os = os;
     }
 
-    public String getInstancesNumber() {
+    public int getInstancesNumber() {
         return instancesNumber;
     }
 
-    public void setInstancesNumber(String instancesNumber) {
+    public void setInstancesNumber(int instancesNumber) {
         this.instancesNumber = instancesNumber;
     }
 
@@ -55,12 +53,12 @@ public class Calculator {
         this.platform = platform;
     }
 
-    public String getVMClass() {
-        return VMClass;
+    public String getVmClass() {
+        return vmClass;
     }
 
-    public void setVMClass(String VMClass) {
-        this.VMClass = VMClass;
+    public void setVmClass(String vmClass) {
+        this.vmClass = vmClass;
     }
 
     public String getTypeInstance() {
@@ -95,12 +93,12 @@ public class Calculator {
         this.dataCenterLocation = dataCenterLocation;
     }
 
-    public String getGPUNumber() {
-        return GPUNumber;
+    public String getNumberGPU() {
+        return numberGPU;
     }
 
-    public void setGPUNumber(String GPUNumber) {
-        this.GPUNumber = GPUNumber;
+    public void setNumberGPU(String numberGPU) {
+        this.numberGPU = numberGPU;
     }
 
     public String getTypeGPU() {
@@ -111,54 +109,44 @@ public class Calculator {
         this.typeGPU = typeGPU;
     }
 
-    public String getCost() {
-        return cost;
-    }
-
-    public void setCost(String cost) {
-        this.cost = cost;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Calculator calculator = (Calculator) o;
+        Instance instance = (Instance) o;
 
-        return Objects.equals(OS, calculator.OS) &&
-                Objects.equals(instancesNumber, calculator.instancesNumber) &&
-                Objects.equals(platform, calculator.platform) &&
-                Objects.equals(VMClass, calculator.VMClass) &&
-                Objects.equals(typeInstance, calculator.typeInstance) &&
-                Objects.equals(localSSD, calculator.localSSD) &&
-                Objects.equals(commitedUsage, calculator.commitedUsage) &&
-                Objects.equals(dataCenterLocation, calculator.dataCenterLocation) &&
-                Objects.equals(GPUNumber, calculator.GPUNumber) &&
-                Objects.equals(typeGPU, calculator.typeGPU) &&
-                Objects.equals(cost, calculator.cost);
+        return Objects.equals(os, instance.os) &&
+                Objects.equals(instancesNumber, instance.instancesNumber) &&
+                Objects.equals(platform, instance.platform) &&
+                Objects.equals(vmClass, instance.vmClass) &&
+                Objects.equals(typeInstance, instance.typeInstance) &&
+                Objects.equals(localSSD, instance.localSSD) &&
+                Objects.equals(commitedUsage, instance.commitedUsage) &&
+                Objects.equals(dataCenterLocation, instance.dataCenterLocation) &&
+                Objects.equals(numberGPU, instance.numberGPU) &&
+                Objects.equals(typeGPU, instance.typeGPU);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(instancesNumber, platform, VMClass, typeInstance, localSSD,
-                commitedUsage, dataCenterLocation, GPUNumber, typeGPU, cost);
+        return Objects.hash(instancesNumber, platform, vmClass, typeInstance, localSSD,
+                commitedUsage, dataCenterLocation, numberGPU, typeGPU);
     }
 
     @Override
     public String toString() {
-        return "Calculator{" +
-                "OS='" + OS + '\'' +
+        return "Instance{" +
+                "os='" + os + '\'' +
                 ", instancesNumber='" + instancesNumber + '\'' +
                 ", platform='" + platform + '\'' +
-                ", VMClass='" + VMClass + '\'' +
+                ", vmClass='" + vmClass + '\'' +
                 ", typeInstance='" + typeInstance + '\'' +
                 ", localSSD='" + localSSD + '\'' +
                 ", commitedUsage='" + commitedUsage + '\'' +
                 ", dataCenterLocation='" + dataCenterLocation + '\'' +
-                ", GPUNumber='" + GPUNumber + '\'' +
+                ", numberGPU='" + numberGPU + '\'' +
                 ", typeGPU='" + typeGPU + '\'' +
-                ", cost='" + cost + '\'' +
                 '}';
     }
 }

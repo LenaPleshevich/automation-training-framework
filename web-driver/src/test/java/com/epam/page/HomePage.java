@@ -10,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 public class HomePage extends AbstractPage {
     private final String PAGE_URL = "https://cloud.google.com/ ";
     private final Logger logger = LogManager.getRootLogger();
+
     @FindBy(xpath = "//*[@track-name='seeProducts']")
     private WebElement buttonExploreAllProducts;
 
@@ -26,7 +27,7 @@ public class HomePage extends AbstractPage {
     }
 
     public ProductPage goToPageProducts() {
-        initWait(buttonExploreAllProducts);
+        waitUntilElementClickable(buttonExploreAllProducts);
         buttonExploreAllProducts.click();
         return new ProductPage(driver);
     }

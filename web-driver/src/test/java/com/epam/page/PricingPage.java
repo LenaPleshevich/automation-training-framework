@@ -9,7 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 
 public class PricingPage extends AbstractPage {
     private final Logger logger = LogManager.getRootLogger();
-    private final String PAGE_URL = "https://github.com/login";
+    private final String PAGE_URL = "https://cloud.google.com/products/";
+
     @FindBy(xpath = "//a[text()='Calculators']")
     private WebElement calculator;
 
@@ -19,14 +20,14 @@ public class PricingPage extends AbstractPage {
     }
 
     @Override
-    protected AbstractPage openPage() {
+    protected PricingPage openPage() {
         driver.navigate().to(PAGE_URL);
         logger.info("Pricing page opened");
         return this;
     }
 
     public CalculatorPage goToPageCalculators() {
-        initWait(calculator);
+        waitUntilElementClickable(calculator);
         calculator.click();
         return new CalculatorPage(driver);
     }
