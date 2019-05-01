@@ -3,7 +3,7 @@
 <suite name="Calculator" verbose="1" >
     <test name="Calculator"   >
         <classes>
-            <class name="com.epam.test.CalculatorPageTest" />
+            <class name="com.epam.test.CalculatorPageTwoTest" />
         </classes>
     </test>
 </suite>
