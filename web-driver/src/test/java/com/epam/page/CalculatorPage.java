@@ -182,7 +182,6 @@ public class CalculatorPage extends AbstractPage {
     public CalculatorPage inputEmail(String email){
         waitUntilElementClickable(emailForm);
         emailForm.sendKeys(email);
-        System.out.println("Enter this email " + email);
         return this;
     }
 
@@ -208,7 +207,6 @@ public class CalculatorPage extends AbstractPage {
 
     public WebDriver emailEstimate(){
         waitUntilElementClickable(emailEstimateButton);
-        System.out.println("Element clickable");
         emailEstimateButton.click();
         return driver;
     }

@@ -1,3 +1,4 @@
+C:\data\temp\automation-training-framework\web-driver\src\test\java\com\epam\service\InstanceCreator.java
 C:\data\temp\automation-training-framework\web-driver\src\test\java\com\epam\page\TenMinuteMailPage.java
 C:\data\temp\automation-training-framework\web-driver\src\test\java\com\epam\service\TestDataReader.java
 C:\data\temp\automation-training-framework\web-driver\src\test\java\com\epam\page\CalculatorPage.java
@@ -5,11 +6,9 @@ C:\data\temp\automation-training-framework\web-driver\src\test\java\com\epam\tes
 C:\data\temp\automation-training-framework\web-driver\src\test\java\com\epam\page\AbstractPage.java
 C:\data\temp\automation-training-framework\web-driver\src\test\java\com\epam\page\ProductPage.java
 C:\data\temp\automation-training-framework\web-driver\src\test\java\com\epam\model\Email.java
-C:\data\temp\automation-training-framework\web-driver\src\test\java\com\epam\model\Calculator.java
 C:\data\temp\automation-training-framework\web-driver\src\test\java\com\epam\service\EmailCreator.java
-C:\data\temp\automation-training-framework\web-driver\src\test\java\com\epam\test\TwoTabTest.java
 C:\data\temp\automation-training-framework\web-driver\src\test\java\com\epam\util\TestListener.java
-C:\data\temp\automation-training-framework\web-driver\src\test\java\com\epam\service\CalculatorCreator.java
+C:\data\temp\automation-training-framework\web-driver\src\test\java\com\epam\model\Instance.java
 C:\data\temp\automation-training-framework\web-driver\src\test\java\com\epam\test\CalculatorPageTwoTest.java
 C:\data\temp\automation-training-framework\web-driver\src\test\java\com\epam\page\TenMinuteMailNetPage.java
 C:\data\temp\automation-training-framework\web-driver\src\test\java\com\epam\page\PricingPage.java

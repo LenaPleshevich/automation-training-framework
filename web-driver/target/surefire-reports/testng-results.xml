@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Calculator" duration-ms="75255" started-at="2019-05-01T13:15:23Z" finished-at="2019-05-01T13:16:38Z">
+  <suite name="Calculator" duration-ms="110975" started-at="2019-05-01T15:50:00Z" finished-at="2019-05-01T15:51:51Z">
     <groups>
     </groups>
-    <test name="Calculator" duration-ms="75255" started-at="2019-05-01T13:15:23Z" finished-at="2019-05-01T13:16:38Z">
+    <test name="Calculator" duration-ms="110975" started-at="2019-05-01T15:50:00Z" finished-at="2019-05-01T15:51:51Z">
       <class name="com.epam.test.CalculatorPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.epam.test.CalculatorPageTest@25790e]" name="setUp" is-config="true" duration-ms="63374" started-at="2019-05-01T13:15:23Z" finished-at="2019-05-01T13:16:26Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.epam.test.CalculatorPageTest@25790e]" name="setUp" is-config="true" duration-ms="73224" started-at="2019-05-01T15:50:00Z" finished-at="2019-05-01T15:51:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="checkTotalCostInEmailTest()[pri:0, instance:com.epam.test.CalculatorPageTest@25790e]" name="checkTotalCostInEmailTest" duration-ms="2499" started-at="2019-05-01T13:16:26Z" finished-at="2019-05-01T13:16:29Z">
+        <test-method status="FAIL" signature="checkTotalCostInEmailTest()[pri:0, instance:com.epam.test.CalculatorPageTest@25790e]" name="checkTotalCostInEmailTest" duration-ms="6087" started-at="2019-05-01T15:51:13Z" finished-at="2019-05-01T15:51:19Z">
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
               <![CDATA[unknown error: cannot determine loading status
@@ -22,8 +22,8 @@ Command duration or timeout: 0 milliseconds
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-4KPN36F', ip: '192.168.100.11', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628402 (536cd7adbad73a..., userDataDir: C:\Users\lenap\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:61782}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.103, webStorageEnabled: true}
-Session ID: daa4737d2b65cd8c07a311a038078de9
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628402 (536cd7adbad73a..., userDataDir: C:\Users\lenap\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:50406}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.103, webStorageEnabled: true}
+Session ID: a740e2a492527897f1f5157a817a1b9c
 *** Element info: {Using=xpath, value=//*[@class='mail-address-address']}]]>
             </message>
             <full-stacktrace>
@@ -35,8 +35,8 @@ Command duration or timeout: 0 milliseconds
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'DESKTOP-4KPN36F', ip: '192.168.100.11', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_181'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628402 (536cd7adbad73a..., userDataDir: C:\Users\lenap\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:61782}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.103, webStorageEnabled: true}
-Session ID: daa4737d2b65cd8c07a311a038078de9
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.46.628402 (536cd7adbad73a..., userDataDir: C:\Users\lenap\AppData\Loca...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:50406}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), rotatable: false, setWindowRect: true, strictFileInteractability: false, takesHeapSnapshot: true, takesScreenshot: true, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 73.0.3683.103, webStorageEnabled: true}
+Session ID: a740e2a492527897f1f5157a817a1b9c
 *** Element info: {Using=xpath, value=//*[@class='mail-address-address']}
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -56,7 +56,7 @@ at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy23.getAttribute(Unknown Source)
+at com.sun.proxy.$Proxy24.getAttribute(Unknown Source)
 at org.openqa.selenium.support.ui.ExpectedConditions.getAttributeOrCssValue(ExpectedConditions.java:1139)
 at org.openqa.selenium.support.ui.ExpectedConditions.lambda$attributeToBeNotEmpty$0(ExpectedConditions.java:1135)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
@@ -97,7 +97,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkTotalCostInEmailTest -->
-        <test-method status="PASS" signature="stopBrowser()[pri:0, instance:com.epam.test.CalculatorPageTest@25790e]" name="stopBrowser" is-config="true" duration-ms="1125" started-at="2019-05-01T13:16:37Z" finished-at="2019-05-01T13:16:38Z">
+        <test-method status="PASS" signature="stopBrowser()[pri:0, instance:com.epam.test.CalculatorPageTest@25790e]" name="stopBrowser" is-config="true" duration-ms="1219" started-at="2019-05-01T15:51:49Z" finished-at="2019-05-01T15:51:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopBrowser -->
