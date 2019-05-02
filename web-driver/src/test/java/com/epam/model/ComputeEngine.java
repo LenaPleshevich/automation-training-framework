@@ -2,7 +2,7 @@ package com.epam.model;
 
 import java.util.Objects;
 
-public class Instance {
+public class ComputeEngine {
     private String os;
     private int instancesNumber;
     private String platform;
@@ -14,9 +14,9 @@ public class Instance {
     private String numberGPU;
     private String typeGPU;
 
-    public Instance(String os, int instancesNumber, String platform, String vmClass,
-                    String typeInstance, String localSSD, String commitedUsage,
-                    String dataCenterLocation, String numberGPU, String typeGPU) {
+    public ComputeEngine(String os, int instancesNumber, String platform, String vmClass,
+                         String typeInstance, String localSSD, String commitedUsage,
+                         String dataCenterLocation, String numberGPU, String typeGPU) {
         this.os = os;
         this.instancesNumber = instancesNumber;
         this.platform = platform;
@@ -114,18 +114,18 @@ public class Instance {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Instance instance = (Instance) o;
+        ComputeEngine computeEngine = (ComputeEngine) o;
 
-        return Objects.equals(os, instance.os) &&
-                Objects.equals(instancesNumber, instance.instancesNumber) &&
-                Objects.equals(platform, instance.platform) &&
-                Objects.equals(vmClass, instance.vmClass) &&
-                Objects.equals(typeInstance, instance.typeInstance) &&
-                Objects.equals(localSSD, instance.localSSD) &&
-                Objects.equals(commitedUsage, instance.commitedUsage) &&
-                Objects.equals(dataCenterLocation, instance.dataCenterLocation) &&
-                Objects.equals(numberGPU, instance.numberGPU) &&
-                Objects.equals(typeGPU, instance.typeGPU);
+        return Objects.equals(os, computeEngine.os) &&
+                instancesNumber == computeEngine.instancesNumber &&
+                Objects.equals(platform, computeEngine.platform) &&
+                Objects.equals(vmClass, computeEngine.vmClass) &&
+                Objects.equals(typeInstance, computeEngine.typeInstance) &&
+                Objects.equals(localSSD, computeEngine.localSSD) &&
+                Objects.equals(commitedUsage, computeEngine.commitedUsage) &&
+                Objects.equals(dataCenterLocation, computeEngine.dataCenterLocation) &&
+                Objects.equals(numberGPU, computeEngine.numberGPU) &&
+                Objects.equals(typeGPU, computeEngine.typeGPU);
     }
 
     @Override
@@ -136,7 +136,7 @@ public class Instance {
 
     @Override
     public String toString() {
-        return "Instance{" +
+        return "ComputeEngine{" +
                 "os='" + os + '\'' +
                 ", instancesNumber='" + instancesNumber + '\'' +
                 ", platform='" + platform + '\'' +

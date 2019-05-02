@@ -29,6 +29,7 @@ public class PricingPage extends AbstractPage {
     public CalculatorPage goToPageCalculators() {
         waitUntilElementClickable(calculator);
         calculator.click();
+        logger.info("Calculator page opened");
         return new CalculatorPage(driver);
     }
 }

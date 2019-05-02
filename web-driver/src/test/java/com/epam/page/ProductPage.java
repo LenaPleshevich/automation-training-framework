@@ -29,6 +29,7 @@ public class ProductPage extends AbstractPage {
     public PricingPage goToPagePrising() {
         waitUntilElementClickable(buttonSeePrising);
         buttonSeePrising.click();
+        logger.info("Pricing page opened");
         return new PricingPage(driver);
     }
 }

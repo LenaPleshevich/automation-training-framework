@@ -29,6 +29,7 @@ public class HomePage extends AbstractPage {
     public ProductPage goToPageProducts() {
         waitUntilElementClickable(buttonExploreAllProducts);
         buttonExploreAllProducts.click();
+        logger.info("Product page opened");
         return new ProductPage(driver);
     }
 }

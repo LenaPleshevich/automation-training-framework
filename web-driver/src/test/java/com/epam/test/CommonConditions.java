@@ -1,13 +1,13 @@
 package com.epam.test;
 
 import com.epam.driver.DriverSingleton;
-import com.epam.model.Instance;
+import com.epam.model.ComputeEngine;
 import com.epam.model.Email;
 import com.epam.page.CalculatorPage;
 import com.epam.page.HomePage;
 import com.epam.page.TenMinuteMailNetPage;
 import com.epam.page.TenMinuteMailPage;
-import com.epam.service.InstanceCreator;
+import com.epam.service.ComputeEngineCreator;
 import com.epam.util.TestListener;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
@@ -19,7 +19,7 @@ public class CommonConditions {
     protected TenMinuteMailNetPage tenMinuteMailNetPage;
     protected TenMinuteMailPage tenMinuteMailPage;
     protected CalculatorPage calculatorPage;
-    protected Instance instance;
+    protected ComputeEngine computeEngine;
     protected Email email;
     protected String resultWithTotalCost;
 
@@ -36,7 +36,7 @@ public class CommonConditions {
     }
 
     public void createEstimate(){
-        instance = InstanceCreator.withCredentialsFromProperties();
+        computeEngine = ComputeEngineCreator.withCredentialsFromProperties();
         homePage = new HomePage(driver).openPage();
         calculatorPage = homePage
                 .goToPageProducts()
@@ -50,15 +50,15 @@ public class CommonConditions {
     }
 
     private void selectParametersInCalculator() {
-        calculatorPage.selectPlatform(instance.getPlatform())
-                .selectInstancesNumber(instance.getInstancesNumber())
-                .selectOS(instance.getOs())
-                .selectVMClass(instance.getVmClass())
-                .selectInstanceType(instance.getTypeInstance())
-                .addGPU(instance.getNumberGPU(), instance.getTypeGPU())
-                .selectLocalSSD(instance.getLocalSSD())
-                .selectDataCenterLocation(instance.getDataCenterLocation())
-                .selectCommitedUsage(instance.getCommitedUsage());
+        calculatorPage.selectPlatform(computeEngine.getPlatform())
+                .selectInstancesNumber(computeEngine.getInstancesNumber())
+                .selectOS(computeEngine.getOs())
+                .selectVMClass(computeEngine.getVmClass())
+                .selectInstanceType(computeEngine.getTypeInstance())
+                .addGPU(computeEngine.getNumberGPU(), computeEngine.getTypeGPU())
+                .selectLocalSSD(computeEngine.getLocalSSD())
+                .selectDataCenterLocation(computeEngine.getDataCenterLocation())
+                .selectCommitedUsage(computeEngine.getCommitedUsage());
     }
 
 }

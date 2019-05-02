@@ -1,7 +1,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="Calculator" verbose="1" >
-    <test name="Calculator"   >
+<suite name="CalculatorPage" verbose="1" >
+    <test name="CalculatorPage"   >
         <classes>
             <class name="com.epam.test.CalculatorPageTwoTest" />
         </classes>

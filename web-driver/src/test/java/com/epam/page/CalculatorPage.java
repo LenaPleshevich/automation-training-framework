@@ -12,7 +12,7 @@ import java.util.List;
 
 public class CalculatorPage extends AbstractPage {
     private final Logger logger = LogManager.getRootLogger();
-    private final String PAGE_URL = "https://cloud.google.com/products/instance/";
+    private final String PAGE_URL = "https://cloud.google.com/products/calculator/";
 
     @FindBy(xpath = "//div[@class='name ng-binding']")
     private List<WebElement> platformList;
@@ -100,7 +100,7 @@ public class CalculatorPage extends AbstractPage {
     @Override
     protected CalculatorPage openPage() {
         driver.navigate().to(PAGE_URL);
-        logger.info("Instance page opened");
+        logger.info("Calculator page opened");
         return this;
     }
 
